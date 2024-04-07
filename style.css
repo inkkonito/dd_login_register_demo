@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+::root {
+  --color1: #fff;
+  --color2: #fff;
+  --color3: #fff;
+  --color4: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+button {
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.quick-actions button {
+  width: 100%;
+}
+
+button.reset {
+  background: green;
+  color: white;
+}
+
+form .form-register {
+  display: flex;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+.input label {
+  text-align: right;
+}
+form button {
+  width: 30%;
+  border: none;
+}
+
+form .form-buttons {
+  display: flex;
+  border-radius: 0.3rem;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  margin: 1rem 0 0.5rem;
+  padding: 0 1rem;
+}

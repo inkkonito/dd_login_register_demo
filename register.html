@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Test Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login & Register form protected by DataDome</h2>
+        <h3>Stack: Node.JS, Express, MySQl</h3>
+
+        <div class="quick-actions">
+            <button class="admin">Admin</button>
+            <button class="autofill">Autofill</button>
+            <button class="blockua">Set BLOCKUA </button>
+        </div>
+
+        <form action="/register" method="POST" class="form-register">
+            <fieldset>
+                <legend>Register</legend>
+                <div class="input">
+                    <label for="firstName">First Name: </label>
+                    <input type="text" name="firstName" placeholder="First Name">
+                </div>
+
+                <div class="input">
+                    <label for="lastName">Last Name: </label>
+                    <input type="text" name="lastName" placeholder="Last Name">
+                </div>
+
+                <div class="input">
+                    <label for="userName">Username: </label>
+                    <input type="text" name="userName" placeholder="Username">
+                </div>
+
+                <div class="input">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset" class="reset">Reset</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
