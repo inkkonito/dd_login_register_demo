@@ -10,45 +10,43 @@
 
 <body>
     <div class="container">
-        <h2>Login & Register form protected by DataDome</h2>
-        <h3>Stack: Node.JS, Express, MySQl</h3>
+        <h2>Login & Register forms protected by DataDome</h2>
 
         <div class="quick-actions">
-            <button class="admin">Admin</button>
-            <button class="autofill">Autofill</button>
-            <button class="blockua">Set BLOCKUA </button>
+            <button id="admin">Admin</button>
+            <button id="autofill">Autofill</button>
+            <button id="blockua">Set BLOCKUA </button>
         </div>
 
-        <form action="/register" method="POST" class="form-register">
-            <fieldset>
-                <legend>Register</legend>
-                <div class="input">
-                    <label for="firstName">First Name: </label>
-                    <input type="text" name="firstName" placeholder="First Name">
+        <h3>Register now!</h3>
+        <div class="form-container">
+            <form action="/register" method="POST">
+                <div class="input-firstName">
+                    <label for="firstName"></label>
+                    <input type="text" name="firstName" placeholder="First Name*" required>
                 </div>
 
-                <div class="input">
-                    <label for="lastName">Last Name: </label>
-                    <input type="text" name="lastName" placeholder="Last Name">
+                <div class="input-lastName">
+                    <label for="lastName"></label>
+                    <input type="text" name="lastName" placeholder="Last Name*" required>
                 </div>
 
-                <div class="input">
-                    <label for="userName">Username: </label>
-                    <input type="text" name="userName" placeholder="Username">
+                <div class="input-businessEmail">
+                    <label for="businessEmail"></label>
+                    <input type="email" name="businessEmail" placeholder="Business Email*" required>
                 </div>
 
-                <div class="input">
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" placeholder="Password">
+                <div class="input-password">
+                    <label for="password"></label>
+                    <input type="email" name="password" placeholder="Password*" required>
                 </div>
 
-                <div class="form-buttons">
-                    <button type="submit">Submit</button>
-                    <button type="reset" class="reset">Reset</button>
-                </div>
 
-            </fieldset>
+                <button type="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+        </div>
         </form>
+    </div>
     </div>
 
 </body>

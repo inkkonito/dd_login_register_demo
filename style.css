@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-::root {
-  --color1: #fff;
-  --color2: #fff;
-  --color3: #fff;
-  --color4: #fff;
+:root {
+  --ddblue: #49bff9;
+  --ddred: #ec5a5f;
+  --ddgreen: #03dac6;
+  --ddgrey: #3d4751;
+  --ddwhite: #e9f2f4;
 }
 
 * {
@@ -18,6 +19,7 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
+  background-color: var(--ddgrey);
 }
 
 button {
@@ -30,9 +32,23 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  background: red;
+  width: 60%;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  outline: 5px solid var(--ddwhite);
+  transition: 0.3s linear;
+}
+
+.container:hover {
+  outline: 10px solid var(--ddwhite);
+}
+
+.container h2 {
+  background-color: var(--ddgreen);
+  text-align: center;
+  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  padding: 0.1rem;
 }
 
 .quick-actions {
@@ -41,42 +57,82 @@ button {
   width: 100%;
   padding: 1rem;
   gap: 1rem;
+  background-color: var(--ddwhite);
 }
 
 .quick-actions button {
   width: 100%;
+  background: none;
 }
 
-button.reset {
-  background: green;
-  color: white;
+.quick-actions button:hover {
+  font-weight: bold;
 }
 
-form .form-register {
-  display: flex;
+button#admin:hover {
+  color: var(--ddred);
 }
 
-.input {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+button#autofill:hover {
+  color: var(--ddgreen);
+}
+
+button#blockua:hover {
+  color: var(--ddblue);
+}
+
+.container h3 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.form-container {
   width: 60%;
-  margin: auto;
-}
-.input label {
-  text-align: right;
-}
-form button {
-  width: 30%;
-  border: none;
+  padding: 1rem 2.5rem;
+  margin: 0 auto;
 }
 
-form .form-buttons {
-  display: flex;
-  border-radius: 0.3rem;
-  justify-content: center;
-  width: 100%;
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 1rem;
-  margin: 1rem 0 0.5rem;
-  padding: 0 1rem;
+  grid-template-areas:
+    "firstname lastname"
+    "businessemail password"
+    "submit reset";
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  width: 100%;
+  color: var(--ddgrey);
+  border: 1px solid var(--ddwhite);
+}
+
+input:focus {
+  border: 3px solid var(--ddgreen);
+  outline: none;
+}
+
+button {
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.08);
+  transition: 0.3s ease-in;
+}
+button[type="reset"]:hover {
+  background-color: var(--ddred);
+  color: var(--ddwhite);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--ddgreen);
+  color: var(--ddwhite);
 }
